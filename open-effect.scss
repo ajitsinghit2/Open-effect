@@ -1,0 +1,177 @@
+ 
+
+ @mixin pre($name, $argument) {
+  #{$name}: $argument;
+  -webkit-#{$name}: $argument;
+  -ms-#{$name}: $argument;
+  -moz-#{$name}: $argument;
+  -o-#{$name}: $argument;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+ 
+
+[data-effect=mix]{ 
+@include pre(animation-name, (mixreset ,mix));
+}
+
+ [data-effect=shuffle]{ 
+@include pre(animation-name, (shufflereset, shuffle));
+}
+
+[data-effect=fix]{ 
+    @include pre(animation-name, (fix 2));
+}
+
+[data-effect=sky]{ 
+    @include pre(animation-name, (sky));
+}
+
+[data-effect=bounce] {
+  @include pre(animation-name, (bounceIn));
+}
+
+/** Animation Duration **/
+
+[data-duration=x]{ 
+   @include pre(animation-duration, (1s));
+ }
+
+[data-duration=xx]{
+  @include pre(animation-duration, (3s)); 
+ }
+
+
+[data-duration=xxx]{
+  @include pre(animation-duration, (10s)); 
+ }
+
+[data-duration=xxxx]{
+  @include pre(animation-duration, (10ms));
+ }
+
+[data-duration=xxxxx]{
+  @include pre(animation-duration, (500ms));  
+ }
+
+/** #Animation Duration **/
+
+
+
+
+
+
+
+/** Animation Time **/
+
+[data-time=linear]{ 
+ @include pre(animation-timing-function, (linear));  
+ }
+
+ [data-time=ease-out]{ 
+  @include pre(animation-timing-function, (ease-out));  
+ }
+
+  [data-time=ease-in-out]{ 
+ @include pre(animation-timing-function, (ease-in-out));   
+ }
+ 
+   [data-time=ease-in]{ 
+  @include pre(animation-timing-function, (ease-in));
+ }
+
+/** #Animation Time **/
+
+
+
+@include keyframes(mixreset) {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 0;
+}
+}
+
+ 
+
+@include keyframes(mix) {
+0% {
+    opacity: 0;
+}
+60% {
+    opacity: 0.5;
+}
+100% {
+    opacity: 1;
+}
+}
+
+ @include keyframes(shufflereset) {
+0% { 
+    @include pre(transform, (scale(0))); 
+}
+100% {
+    @include pre(transform, (scale(0))); 
+}
+}
+ 
+  @include keyframes(shuffle) {
+0% {
+     @include pre(transform, (scale(9))); 
+}
+60% { 
+      @include pre(transform, (scale(5))); 
+}
+100% { 
+      @include pre(transform, (scale(1))); 
+}
+}
+ 
+   @include keyframes(fix) {
+0% {opacity: 0;  @include pre(transform, (rotateY(90deg))); }
+    100% {opacity: 1; @include pre(transform, (rotateY(0deg)));  }
+
+}
+
+   @include keyframes(sky) {
+
+    0% { @include pre(transform, (rotateX(90deg)));  }
+    100% { @include pre(transform, (rotateX(0deg))); }
+}
+
+ 
+    @include keyframes(bounceIn) {
+
+     0% {
+    opacity: 0;
+    @include pre(transform,(scale(.3)));  
+    }
+
+    50% {
+      opacity: 1;
+      @include pre(transform,(scale(1.05))); 
+    }
+
+    70% {
+    @include pre(transform,(scale(.9))); 
+    }
+
+    100% {
+     @include pre(transform,(scale(1))); 
+    }
+}
+
