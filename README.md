@@ -23,9 +23,9 @@ Time List
 --------------
 - Data-Time
  - **linear** 
- - **ease-out**
- - **ease-in-out**
- - **ease-in** 
+ - **easeout**
+ - **easeinout**
+ - **easein** 
 
 Usage
 --------------
@@ -42,15 +42,15 @@ Example
 --------------
 
 ```html
-   <div data-effect="mix" data-duration="x" data-time="ease-out"></div>
+   <div data-effect="mix" data-duration="x" data-time="easeout"></div>
 ``` 
 
 ```html
-   <body data-effect="sky" data-duration="x" data-time="ease-in"></div>
+   <body data-effect="sky" data-duration="x" data-time="easein"></div>
 ``` 
 
 ```html
-   <section data-effect="fix" data-duration="xxx" data-time="ease-in"></div>
+   <section data-effect="fix" data-duration="xxx" data-time="easein"></div>
 ``` 
 
-[Check out Demo!](http://jsfiddle.net/cobaimelan/9K3Ud/4/embedded/result,html,css/)
+[Check out Demo!](http://jsfiddle.net/cobaimelan/9K3Ud/5/embedded/result,html,css/)

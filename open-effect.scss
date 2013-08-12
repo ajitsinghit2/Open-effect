@@ -81,16 +81,16 @@
  @include pre(animation-timing-function, (linear));  
  }
 
- [data-time=ease-out]{ 
-  @include pre(animation-timing-function, (ease-out));  
+ [data-time=easeout]{ 
+  @include pre(animation-timing-function, (easeout));  
  }
 
-  [data-time=ease-in-out]{ 
- @include pre(animation-timing-function, (ease-in-out));   
+  [data-time=easeinout]{ 
+ @include pre(animation-timing-function, (easeinout));   
  }
  
-   [data-time=ease-in]{ 
-  @include pre(animation-timing-function, (ease-in));
+   [data-time=easein]{ 
+  @include pre(animation-timing-function, (easein));
  }
 
 /** #Animation Time **/
