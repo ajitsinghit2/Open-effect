@@ -37,8 +37,8 @@
   @include pre(transform-origin-x, (0%));
   @include pre(transform-origin-y, (50%));
   @include pre(backface-visibility, (hidden));
-  @include pre(animation-name, (fix 2s both));
-
+  @include pre(animation, (fix 2s both));
+  @include pre(animation-delay, ( 1.2s)); 
 
 }
 

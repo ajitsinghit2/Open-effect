@@ -33,11 +33,16 @@
   -ms-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
-  animation-name: fix 2s both;
-  -webkit-animation-name: fix 2s both;
-  -ms-animation-name: fix 2s both;
-  -moz-animation-name: fix 2s both;
-  -o-animation-name: fix 2s both; }
+  animation: fix 2s both;
+  -webkit-animation: fix 2s both;
+  -ms-animation: fix 2s both;
+  -moz-animation: fix 2s both;
+  -o-animation: fix 2s both;
+  animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+  -ms-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  -o-animation-delay: 1.2s; }
 
 [data-effect=sky] {
   animation-name: sky;
