@@ -9,6 +9,7 @@ Effect List
  - **Fix**
  - **Sky**
  - **Bounce**
+ - **Shake**
 
 Duration List 
 --------------
@@ -53,4 +54,4 @@ Example
    <section data-effect="fix" data-duration="xxx" data-time="easein"></div>
 ``` 
 
-[Check out Demo!](http://jsfiddle.net/cobaimelan/9K3Ud/5/embedded/result,html,css/)
+[Check out Demo!](http://jsfiddle.net/cobaimelan/9K3Ud/6/embedded/result,html,css/)

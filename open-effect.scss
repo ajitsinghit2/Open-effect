@@ -50,6 +50,11 @@
   @include pre(animation-name, (bounceIn));
 }
 
+[data-effect=shake] {
+  @include pre(animation-name, (shake));
+  visibility: visible !important;
+}
+
 /** Animation Duration **/
 
 [data-duration=x]{ 
@@ -183,5 +188,41 @@
     100% {
      @include pre(transform,(scale(1))); 
     }
+}
+
+
+
+
+    @include keyframes(shake) {
+
+    0% {
+      @include pre(transform,(scale(0.3) rotate(6deg) translateX(-30%) translateY(30%)));  
+      opacity: 0.2;
+    }
+    30% {
+     @include pre(transform,(scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%)));    
+      opacity: 1;
+    }
+    45% {
+      @include pre(transform,(scale(0.98) rotate(1deg) translateX(0%) translateY(0%)));  
+      opacity: 1;
+    }
+    60% {
+    @include pre(transform,(scale(1.01) rotate(-1deg) translateX(0%) translateY(0%)));   
+    opacity: 1;
+    }
+
+  75% {
+    @include pre(transform,(scale(0.99) rotate(1deg) translateX(0%) translateY(0%)));   
+    opacity: 1;
+  }
+    90% {
+    @include pre(transform,( scale(1.01) rotate(0deg) translateX(0%) translateY(0%)));  
+    opacity: 1; 
+  }
+ 100% {
+    @include pre(transform,( scale(1) rotate(0deg) translateX(0%) translateY(0%)));   
+    opacity: 1;
+  } 
 }
 
