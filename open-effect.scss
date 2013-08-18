@@ -33,7 +33,13 @@
 }
 
 [data-effect=fix]{ 
-    @include pre(animation-name, (fix 2));
+  @include pre(transform-style, (preserve-3d));
+  @include pre(transform-origin-x, (0%));
+  @include pre(transform-origin-y, (50%));
+  @include pre(backface-visibility, (hidden));
+  @include pre(animation-name, (fix 2s));
+
+
 }
 
 [data-effect=sky]{ 
@@ -147,11 +153,15 @@
 
 }
 
+
+
    @include keyframes(sky) {
 
     0% { @include pre(transform, (rotateX(90deg)));  }
     100% { @include pre(transform, (rotateX(0deg))); }
 }
+
+
 
  
     @include keyframes(bounceIn) {

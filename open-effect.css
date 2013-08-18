@@ -13,11 +13,31 @@
   -o-animation-name: shufflereset, shuffle; }
 
 [data-effect=fix] {
-  animation-name: fix 2;
-  -webkit-animation-name: fix 2;
-  -ms-animation-name: fix 2;
-  -moz-animation-name: fix 2;
-  -o-animation-name: fix 2; }
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-origin-x: 0%;
+  -webkit-transform-origin-x: 0%;
+  -ms-transform-origin-x: 0%;
+  -moz-transform-origin-x: 0%;
+  -o-transform-origin-x: 0%;
+  transform-origin-y: 50%;
+  -webkit-transform-origin-y: 50%;
+  -ms-transform-origin-y: 50%;
+  -moz-transform-origin-y: 50%;
+  -o-transform-origin-y: 50%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  animation-name: fix 2s;
+  -webkit-animation-name: fix 2s;
+  -ms-animation-name: fix 2s;
+  -moz-animation-name: fix 2s;
+  -o-animation-name: fix 2s; }
 
 [data-effect=sky] {
   animation-name: sky;
