@@ -55,6 +55,13 @@
   visibility: visible !important;
 }
 
+[data-effect=pop]{
+@include pre(animation, (pop .3s ease-out));
+@include pre(animation-fill-mode, (forwards));
+@include pre(animation, (pop .3s ease-out));
+@include pre(animation-fill-mode, (forwards));
+
+}
 /** Animation Duration **/
 
 [data-duration=x]{ 
@@ -226,3 +233,21 @@
   } 
 }
 
+ @include keyframes(pop) {
+ 0% {
+      @include pre(transform,(scale(1)));  
+    }
+ 40% {
+      @include pre(transform,(scale(1,1.2)));
+     }
+ 60% {
+      @include pre(transform,(scale(1.2,1)));
+     }     
+ 80% {
+      @include pre(transform,(scale(0.9)));
+     }  
+ 100% {
+      @include pre(transform,(scale(1)));
+     }  
+
+ }
